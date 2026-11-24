@@ -3,8 +3,8 @@ command = "npm run build"
 publish = "dist"
 functions = "netlify/functions"
 
-# O .env.example é só um modelo (vai pro Git) e tem valores como smtp.ethereal.email.
-# Sem isso, o scanner de segredos da Netlify acha o valor e derruba o build.
+# O .env.example é só um modelo (vai pro Git) com valores de exemplo.
+# Sem isso, o scanner de segredos da Netlify acha esses valores e derruba o build.
 [build.environment]
 SECRETS_SCAN_OMIT_PATHS = ".env.example"
 
