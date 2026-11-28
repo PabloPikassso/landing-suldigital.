@@ -292,7 +292,7 @@ O TypeScript da pasta `netlify/functions` roda no **Node** (usa `process.env`), 
 
 | Variável | Para que serve |
 |---|---|
-| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` | Servidor SMTP (ex.: `smtp.gmail.com`, `587`, `false`) |
+| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` | Servidor SMTP (ex.: o endereço SMTP do Gmail, porta `587`, `false`) |
 | `SMTP_USER` / `SMTP_PASS` | Login do SMTP. No Gmail, `SMTP_PASS` é uma **Senha de App** (nunca a senha real) |
 | `CONTACT_EMAIL` | Quem recebe as mensagens |
 | `ALLOWED_ORIGIN` | URL do site liberada no CORS |
