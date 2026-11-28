@@ -337,3 +337,18 @@ Na `Home.tsx`, a nova `<section id="contact">` é o destino do link "Contato" do
 6. Clicar em **Deploy** e aguardar o build; o site fica acessível na URL da Netlify.
 
 **Por que cadastrar as variáveis na Netlify?** O `.env` não vai para o GitHub (segurança), então o servidor da Netlify precisa receber esses valores pelo painel; a function lê com `process.env`.
+
+---
+
+## 19. Footer (`src/components/footer.tsx` e `src/style/footer.css`)
+
+O footer (rodapé) segue o layout do Figma, com links e contatos do site do cliente.
+
+- **Dados em arrays:** `socials` (redes sociais) e `columns` (cada coluna tem `title` e `links`). Para adicionar um link basta mexer no array, sem repetir HTML.
+- **`.map()` dentro de `.map()`:** o primeiro percorre as colunas e o segundo os links de cada coluna. Cada item tem uma `key` única para o React identificar o elemento.
+- **Links externos:** `link.url.startsWith("http")` decide se abre em outra aba (`target="_blank"`). `rel="noreferrer"` impede que a página aberta receba o endereço de origem ou controle a nossa aba.
+- **Tipos de link:** `#pricing` rola até a seção; `tel:` abre o telefone; `mailto:` abre o e-mail; `https://wa.me/<número>` abre uma conversa no WhatsApp.
+- **Ano automático:** `new Date().getFullYear()` atualiza o ano do copyright sozinho.
+- **Tag semântica `<footer>`:** informa ao navegador e a leitores de tela que é o rodapé.
+- **CSS mobile first:** no celular o fundo é a cor principal, o texto é claro e as colunas ficam empilhadas (`flex-direction: column`). Em telas a partir de 1280px o fundo fica branco e vira um grid de 4 colunas (`grid-template-columns: 2fr 1fr 1fr 1fr`).
+- **`filter: brightness(0) invert(1)`:** deixa o logo e os ícones azuis brancos sobre o fundo azul.

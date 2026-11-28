@@ -7,6 +7,7 @@ import Card from "./components/card";
 import TestimonialCard from "./components/testimonialCard";
 import PricingCard from "./components/pricingCard";
 import ContactForm from "./components/contactForm";
+import Footer from "./components/footer";
 import HeroRectangleOne from "./assets/images/RectangleOne.png";
 import HeroRectangleTwo from "./assets/images/RectangleTwo.png";
 import ProfileOne from "./assets/images/profile-one.webp";
@@ -271,6 +272,8 @@ export default function Home() {
 
                 <ContactForm />
             </section>
+
+            <Footer />
 
         </>
     )
